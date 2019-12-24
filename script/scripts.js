@@ -1,5 +1,8 @@
 window.addEventListener('load', function(event) {
 
+	/*Shorten logo in small screen*/
+	//var logo = document.getElementsByClassName('headerA')[0];
+/*
 	var fails = 0;
 	var failMeddelande;
 	var btnKey = document.getElementById('btnKey');
@@ -12,7 +15,7 @@ window.addEventListener('load', function(event) {
 	let promiseKey = new Promise(function(succeed,fail){
 
 		btnKey.addEventListener('click', function(event){
-			
+
 			var url = 'https://www.forverkliga.se/JavaScript/api/crud.php?requestKey';
 			var ajax = new XMLHttpRequest();
 			ajax.open('get', url);
@@ -46,7 +49,7 @@ window.addEventListener('load', function(event) {
 			pKey.innerText = 'Please try again.'
 		});
 
-	
+
 
 	//View books functionality
 	var btnView = document.getElementById('btnView');
@@ -58,7 +61,7 @@ window.addEventListener('load', function(event) {
 	var erMsgVb = "";
 
 	btnView.addEventListener('click', function(event){
-		
+
 
 		var url = 'https://www.forverkliga.se/JavaScript/api/crud.php?op=select&key=' + key;
 		viewBook(url);
@@ -78,7 +81,7 @@ window.addEventListener('load', function(event) {
 						errorM.style.display = 'block';
 						errorM.innerText = 'Currently, there are no book in the database. Please add a book';
 
-    				} 
+    				}
     				else {
     					//Here comes books
     					var booksArray = data.data;
@@ -91,7 +94,7 @@ window.addEventListener('load', function(event) {
     						//books.appendChild(textNode);
     						//booksResult.appendChild(books);
     						//div element that represents book
-    						var divBook = document.createElement('div'); 
+    						var divBook = document.createElement('div');
     						divBook.className = 'book';
     						booksResult.appendChild(divBook);
     						//P for book ID
@@ -140,7 +143,7 @@ window.addEventListener('load', function(event) {
 			errorM.style.display = 'block';
 			errorM.innerText = error;
 
-  		});  //end of catch 
+  		});  //end of catch
 
 	}//end viewBook
 
@@ -175,7 +178,7 @@ window.addEventListener('load', function(event) {
 
 		addBook(url, bookTitle, bookAuthor);
 		//console.log('after fetch: ' + erMsg + nrOfAttemptsAb);
-		
+
 
   		} //end of else
 	}); //end of btnAdd.eventListener
@@ -193,7 +196,7 @@ window.addEventListener('load', function(event) {
     				console.log(bookString);
     				titleAddedBooks.style.display = 'block';  //Title
     				//div element that represents book
-    				var divBook = document.createElement('div'); 
+    				var divBook = document.createElement('div');
     				divBook.className = 'book';
     				addedBooks.appendChild(divBook);
 
@@ -215,7 +218,7 @@ window.addEventListener('load', function(event) {
 
     				ids.push(data.id);
 
-    				//addedBooks.style.marginBottom = '25';				
+    				//addedBooks.style.marginBottom = '25';
 
 
 
@@ -234,7 +237,7 @@ window.addEventListener('load', function(event) {
 					errorAddBook.innerText = 'The last failure reason: ' + erMsg;
 					errorAddbook2.style.display = 'block';
 					errorAddbook2.innerHTML = 'Number of attempts: ' + nrOfAttemptsAb;
-					
+
 					if(nrOfAttemptsAb < 10){
 						addBook(urlAb, title, author);
 					}
@@ -305,13 +308,13 @@ window.addEventListener('load', function(event) {
     			console.log(data);
     			console.log(data.status);
     			if (data.status === 'success'){
-    				
+
     				var bookString = 'Id: ' + idc + ', ' + titlec + ', ' + authorc;
     				console.log(bookString);
 
     				titleChangedBook.style.display = 'block';  //Title
     				//div element that represents book
-    				var divBook = document.createElement('div'); 
+    				var divBook = document.createElement('div');
     				divBook.className = 'book';
     				replacedBook.appendChild(divBook);
 
@@ -331,7 +334,7 @@ window.addEventListener('load', function(event) {
     				var paragEnd = document.getElementById('pEndC');
     				paragEnd.style.display = 'block';
 
-    				
+
 
     			} else if (data.status === 'error'){
     				console.log(data.message);
@@ -344,7 +347,7 @@ window.addEventListener('load', function(event) {
 					errorChangeBook.innerText = 'The last failure reason: ' + erMsgC;
 					errorChangeBook2.style.display = 'block';
 					errorChangeBook2.innerHTML = 'Number of attempts: ' + nrOfAttemptsCb;
-					
+
 					if(nrOfAttemptsCb < 10){
 						changeBook(urlCb, idc, titlec, authorc);
 					}
@@ -376,7 +379,7 @@ window.addEventListener('load', function(event) {
 
 		var bookId = document.getElementById('inputDeleteBookId').value;
 		document.getElementById('inputDeleteBookId').value = "";
-		
+
 		console.log('Id: ' + bookId);
 		console.log(typeof ids[0]);
 		console.log(typeof bookId);
@@ -412,13 +415,13 @@ window.addEventListener('load', function(event) {
     			console.log(data);
     			console.log(data.status);
     			if (data.status === 'success'){
-    				
+
     				var bookString = 'Id: ' + idd;
     				console.log(bookString);
 
     				titleDeletedBook.style.display = 'block';  //Title
     				//div element that represents book
-    				var divBook = document.createElement('div'); 
+    				var divBook = document.createElement('div');
     				divBook.className = 'book';
     				deletedBook.appendChild(divBook);
 
@@ -426,11 +429,11 @@ window.addEventListener('load', function(event) {
     				var paragId = document.createElement('p');
     				paragId.innerText = 'The book with id:  ' + idd + ' is deleted';
     				divBook.appendChild(paragId);
-    				
+
     				var paragEnd = document.getElementById('pEndD');
     				paragEnd.style.display = 'block';
 
-    				
+
 
     			} else if (data.status === 'error'){
     				console.log(data.message);
@@ -443,7 +446,7 @@ window.addEventListener('load', function(event) {
 					errorDeleteBook.innerText = 'The last failure reason: ' + erMsgD;
 					errorDeleteBook2.style.display = 'block';
 					errorDeleteBook2.innerHTML = 'Number of attempts: ' + nrOfAttemptsDb;
-					
+
 					if(nrOfAttemptsDb < 10){
 						deleteBook(urlDb, idd);
 					}
@@ -466,23 +469,19 @@ window.addEventListener('load', function(event) {
 	btnView.addEventListener('click', function(event){
 		var url = 'https://www.forverkliga.se/JavaScript/api/crud.php?op=select&key=' + key;
 		fetch(url).then(function(response) {
-		
+
 	  		if(response.status === 'success') {
 	  			console.log(response.status);
 	    		return response.data.json();
 		  	}
 	  		throw new Error(response.message);
-		}).then(function(json) { 
-			console.log(json); 
+		}).then(function(json) {
+			console.log(json);
 		}).catch(function(error) {
 	  		console.log(error);
 		}); //end of fetch
 	});//end of btnView eventListener*/
-	
+
 
 
 }); //windows.load
-
-
-	
-
