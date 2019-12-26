@@ -64,15 +64,13 @@ body {
   width: 100%;
 }
 
-
-
 h1 {
-	font-size: 2.4rem;
+	font-size: 1.7rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 a {
@@ -111,7 +109,7 @@ header {
 /*Hero Styles*/
 .hero {
 	width: 100%;
-	height: 420px;
+	height: 400px;
 	background-color: #0c0c0c;
 	background-image:
 		linear-gradient(
@@ -141,24 +139,7 @@ header {
 		align-items: center;
 		color: #E0E0E0;
 	}
-		.text h3 {
-			width: 470px;
-			margin: 0 auto;
-		}
-		.text button {
-			width: 140px;
-			height: 40px;
-			background-color: transparent;
-			border: 2px solid white;
-			border-radius: 5px;
-			color: white;
-			font-size: 1.2rem;
-		}
-		.text button:hover {
-			color: #4d4d4d;
-			background-color: white;
-			border: 2px solid #F4F4F4;
-		}
+
 
 		.text p {
 			width: 200px;
@@ -166,185 +147,30 @@ header {
 			display: none;
 			font-weight: bold;
 		}
-/*Section Fails*/
-#fails {
-	width: 100%;
-	height: 50px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	background-color: #0F1626;
+
+/*Menu styles*/
+nav {
+  background-color: #0c0c0c;
+  opacity: 0.5;
+  min-height: 20px;
 }
-
-/*Section main*/
-.btnTitle {
-	width: 100%;
-	height: 42px;
-	background-color: #0F1626;
-	color: white;
-	font-size: 1.2rem;
-	border:none;
-}
-.btnMain {
-	border: 2px solid #0F1626;
-	color: #0F1626;
-	margin-left: 20px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	height: 30px;
-	width: 135px;
-	font-size: 1.2rem;
-	display: block;
-}
-input[type="text"] {
-	display: block;
-	color: #0F1626;
-	margin-left: 20px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	height: 30px;
-	width: 250px;
-	font-size: 1.2rem;
-}
-.book p {
-	padding-left: 20px;
-}
-.book {
-	padding-bottom: 10px;
-	padding-top: 10px;
-	border-bottom: 1px solid grey;
-}
-p.end {
-	margin-top: 8px;
-	display: none;
-	margin-bottom: 20px;
-	padding-left: 20px;
-}
-
-#main {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	background-color: #192231;
-}
-	#divBooks {
-		position: relative;
-		width: 80%;
-		min-height: 100px;
-		margin-top: 35px;
-		margin-bottom: 30px;
-	}
-	#booksResult {
-		width: 100%;
-	}
-		#errorM {
-			padding-left: 20px;
-			display: none;
-		}
-		#errorM2 {
-			padding-left: 20px;
-			padding-bottom: 30px;
-			display: none;
-		}
-		.paragBooks {
-			padding-left: 20px;
-			padding-bottom: 30px;
-			display: none;
-		}
-		#booksResult > p {
-			padding-left: 20px;
-			padding-bottom: 15px;
-		}
-
-	#addedBooks {
-		width: 100%;
-	}
-		#errorAddBook {
-			display: none;
-		}
-		#errorAddbook2 {
-			display: none;
-		}
-	#addedBooks > p {
-		padding-left: 20px;
-		padding-bottom: 15px;
-	}
-	#addedBooks h4 {
-		padding-left: 20px;
-		padding-bottom: 15px;
-		padding-top: 20px;
-		display: none;
-	}
-
-	/*Change book style*/
-	#replacedBooks {
-		width: 100%;
-	}
-	#replacedBooks > p {
-		padding-left: 20px;
-		padding-bottom: 15px;
-	}
-	#errorChangeBook {
-		padding-left: 20px;
-		display: none;
-	}
-	#errorChangeBook2 {
-		padding-left: 20px;
-		padding-bottom: 30px;
-		display: none;
-	}
-	#replacedBook h4 {
-		padding-left: 20px;
-		padding-bottom: 15px;
-		padding-top: 20px;
-		display: none;
-	}
-
-	/*Change book style*/
-	#deletedBook > p {
-		padding-left: 20px;
-		padding-bottom: 15px;
-	}
-	#deletedBook h4 {
-		padding-left: 20px;
-		padding-bottom: 15px;
-		padding-top: 20px;
-		display: none;
-	}
-	#errorDeleteBook {
-		padding-left: 20px;
-		display: none;
-	}
-	#errorDeleteBook2 {
-		padding-left: 20px;
-		padding-bottom: 30px;
-		display: none;
-	}
-
-
-
-
 /*Footer styles*/
 footer {
 	width: 100%;
 	height: 50px;
-	background-color: #181818;
+	background-color: #0c0c0c;
 }
 
 /*Media queries*/
-@media (max-width: 1170px) {
-	h1 {
-		font-size: 2rem;
-	}
-}
 @media (max-width: 1000px) {
 	h1 {
 		font-size: 1.5rem;
 	}
+}
+@media (max-width: 800px) {
+  .hero {
+    height: 250px;
+  }
 }
 @media (max-width: 570px) {
 	h1 {
@@ -353,11 +179,42 @@ footer {
 	h3 {
 		font-size: 1rem;
 	}
+  .text {
+    line-height: 30px;
+  }
+}
+@media (max-width: 570px) {
+  .hero {
+    height: 220px;
+  }
 }
 @media (max-width: 380px) {
 	h1 {
 		font-size: 1rem;
 	}
+}
+
+@media (min-width: 300px) {
+
+	.shortH1 {
+		display: none;
+	}
+	.longH1 {
+		display: block;
+	}
+}
+
+@media (max-width: 299px) {
+
+	.shortH1 {
+		display: block;
+	}
+	.longH1 {
+		display: none;
+	}
+  .hero {
+    height: 200px;
+  }
 }
 
 @media (max-width: 250px) {
@@ -366,6 +223,12 @@ footer {
 	}
 	.long {
 		display: none;
+	}
+  .shortH1 {
+		font-size: 0.8rem;
+	}
+  h3 {
+		font-size: 0.7rem;
 	}
 }
 @media (min-width: 251px) {
