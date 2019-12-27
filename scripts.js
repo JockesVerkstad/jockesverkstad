@@ -1,42 +1,9 @@
 window.addEventListener('load', function(event) {
 
-
-  /*Tab menu functions*/
-  document.getElementById("Maskin").style.display = "block";
-
-  var btnMaskin = document.getElementById('btnmaskin');
-  btnMaskin.addEventListener('click', function(event){
-
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById("Maskin").style.display = "block";
-    event.currentTarget.className += " active";
-  });//end of function
-
-  var btnMaskin = document.getElementById('btnfordon');
-  btnMaskin.addEventListener('click', function(event){
-
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById("Fordon").style.display = "block";
-    event.currentTarget.className += " active";
-  });//end of function
-
-
+  /*Tab menu function*/
+  function openTabContent(){
+    console.log("Cliacked");
+  }
   /*
   function openTabContent(evt, tabName) {
     var i, tabcontent, tablinks;
